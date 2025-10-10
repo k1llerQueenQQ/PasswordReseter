@@ -1,5 +1,5 @@
 # simple_email_sender.py
-import smtplib
+import smtplib, random
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -13,7 +13,15 @@ class SimpleEmailSender:
             'smtp_port': 587,                    # Порт
             'default_to': 'recipient@example.com' # Получатель по умолчанию
         }
-    
+        
+    def generate_random(self):
+        generated_code=""
+        for i in range(10):
+            generated_code += str(random.randint(0,9)) 
+        
+        return generated_code
+        print(generated_code)
+
     def send_email(self, subject, message, to_email=None):
         """Простая отправка email"""
         if to_email is None:
@@ -41,12 +49,15 @@ class SimpleEmailSender:
 
 # Использование:
 if __name__ == '__main__':
+    
     sender = SimpleEmailSender()
     
+
     # Просто отправляем письмо
     success, result = sender.send_email(
         subject="Тестовое письмо",
-        message="Привет! Это тестовое письмо."
+        
+        message=sender.generate_random()
     )
     
     print(result)
