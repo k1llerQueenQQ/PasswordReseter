@@ -23,10 +23,10 @@ class DatabaseManager:
     def __init__(self):
         # DATABASE CONFIGURATION FOR POSTGRESQL
         self.db_config = {
-            'host': os.getenv('DB_HOST', 'localhost'),
-            'user': os.getenv('DB_USER', 'postgres'),
-            'password': os.getenv('DB_PASSWORD', 'password'),
-            'database': os.getenv('DB_NAME', 'unity_auth'),
+            'host': os.getenv('DB_HOST', '176.108.147.162'),
+            'user': os.getenv('DB_USER', 'unity_user'),
+            'password': os.getenv('DB_PASSWORD', 'donotkys84'),
+            'database': os.getenv('DB_NAME', 'unity_db'),
             'port': os.getenv('DB_PORT', '5432'),
         }
     
@@ -106,10 +106,10 @@ class EmailSender:
     def __init__(self):
         # Email Configuration
         self.config = {
-            'email': os.getenv('SMTP_EMAIL', 'your_smtp_email'),
-            'password': os.getenv('SMTP_PASSWORD', 'your_smtp_password'),
+            'email': os.getenv('SMTP_EMAIL', 'minicop.official@gmail.com'),
+            'password': os.getenv('SMTP_PASSWORD', 'flrtutqawhamfpac'),
             'smtp_server': os.getenv('SMTP_SERVER', 'smtp.gmail.com'),
-            'smtp_port': int(os.getenv('SMTP_PORT', '587')),
+            'smtp_port': int(os.getenv('SMTP_PORT', '465')),
         }
         
     def generate_random_code(self):
