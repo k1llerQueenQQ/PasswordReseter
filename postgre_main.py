@@ -23,9 +23,9 @@ class DatabaseManager:
     def __init__(self):
         # DATABASE CONFIGURATION FOR POSTGRESQL
         self.db_config = {
-            'host': os.getenv('DB_HOST', '176.108.147.162'),
-            'user': os.getenv('DB_USER', 'unity_user'),
-            'password': os.getenv('DB_PASSWORD', 'donotkys84'),
+            'host': os.getenv('DB_HOST', 'your_ip'),
+            'user': os.getenv('DB_USER', 'your_user'),
+            'password': os.getenv('DB_PASSWORD', 'your_db-password'),
             'database': os.getenv('DB_NAME', 'unity_db'),
             'port': os.getenv('DB_PORT', '5432'),
         }
